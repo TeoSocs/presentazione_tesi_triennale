@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Tesi</title>
+
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/white.css">
+
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+	<section data-markdown>
+		![Logo Unipd](img/logo-unipd.png)
+		### Contesti di applicabilità di blockchain
+		Proposta di un sistema di voto elettronico a trust limitato
+
+		18 Aprile 2018
+	</section>
+	<section>
+		<section data-markdown>
+			Candidato | Matteo Sovilla
+			--- | ---
+			Relatore | Prof. Mauro Conti
+			Azienda ospitante | InfoCamere S.C.p.A
+			Tutor aziendale | Dott. Enrico Notariale
+		</section>
+		<section data-markdown>
+			InfoCamere
+			- Supporto al back-office camerale
+			- Gestione contabilità e personale
+			- Gestione database
+		</section>
+	</section>
+	<section>
+		<section data-markdown>
+			### Blockchain
+			- Nuova Internet del Valore
+			- Democrazia digitale
+			- Quinto _disruptive computing paradigm_
+			- Quarta rivoluzione industriale
+		</section>
+		<section data-markdown>
+			![HypeCycle Gartner](img/HypeCycleThemes.png)
+		</section>
+		<section data-markdown>
+			![Valore di Bitcoin nel 2018](img/bitcoin-price-update.png)
+		</section>
+		<section data-markdown>
+			### Registro distribuito
+			- Peer-to-peer
+			- Crittograficamente sicuro
+			- Append-only
+			- Immutabile
+			- _Aggiornabile solo previo consenso_
+		</section>
+	</section>
+	<section>
+		<section data-markdown>
+			### Double spending
+			![Schema di double spending](img/double_spending_problem.jpg)
+		</section>
+		<section data-markdown>
+			### Soluzione centralizzata
+			![Schema di interazione con DB centralizzato](img/central_counterparty.png)
+		</section>
+		<section data-markdown>
+			### Generali bizantini
+			![Schema di problema di generali bizantini](img/byzantine_generals.png)
+		</section>
+		<section data-markdown>
+			### Teorema CAP
+			![Schema di teorema CAP](img/cap.png)
+		</section>
+	</section>
+	<section>
+		<section data-markdown>
+			### Block - chain
+			![Struttura a blocchi](img/bitcoin-block-chain.png)
+		</section>
+		<section data-markdown>
+			Aggiungere blocchi è oneroso
+			![Difficoltà di mining](img/difficulty.png)
+		</section>
+		<section data-markdown>
+			### Consenso Proof-of-work
+			_Vince_ la catena più lunga
+		</section>
+		<section data-markdown>
+			### Altri consensi
+			- Proof-of-Stake
+			- Proof-of-Elapsed-Time
+		</section>
+		<section data-markdown>
+			### Solo in catene private
+			- Federated (Byzantine) agreement
+			- Practical Byzantine Fault Tolerance
+		</section>
+	</section>
+	<section>
+		<section data-markdown>
+			### Analisi SWOT
+		</section>
+		<section data-markdown>
+			### Strengths
+			- Nessun DB centralizzato
+				- Condivido dati, responsabilità, trust
+			- Sistema resiliente
+				- No SPoF, censurabilità o revocabilità del servizio 
+			- Crittograficamente sicuro
+		</section>
+		<section data-markdown>
+			### Weaknesses
+			- Inefficienza
+			- Problemi di privacy
+			- Tecnologie immature
+		</section>
+		<section data-markdown>
+			### Opportunities
+			- Razionalizzazione certificati
+			- Gestione identità digitale
+			- Voto elettronico
+			- Sistemi IoT "certificati"
+		</section>
+		<section data-markdown>
+			### Threats
+			- Complessità e difficile adattabilità
+			- Difficile previsione dei costi
+			- Impossibili interventi correttivi
+			- Rischio di lock-in
+		</section>
+	</section>
+	<section>
+		<section data-markdown>
+			### Proof of concept
+			Sistema di voto online
+		</section>
+		<section data-markdown>
+			### Ecosistema attuale
+			![Logo Ethereum](img/ethereum-logo.png)
+
+			![Logo Hyperledger](img/hyperledger_logo.png)
+		</section>
+		<section data-markdown>
+			![Logo Fabric](img/fabric_logo.png)
+
+			![Logo Sawtooth](img/sawtooth_logo.png)
+
+			![Logo Indy](img/indy-logo.png)
+		</section>
+		<section data-markdown>
+			### Ring signature
+			![Schema di ring signature](img/ring_signature.png)
+		</section>
+		<section data-markdown>
+			### Workflow
+			![Workflow della votazione](img/voting_workflow.png)
+		</section>
+		<section data-markdown>
+			### Analogie con il sistema tradizionale
+			![Firma tradizionale](img/firma_voto.png)
+			![Firma e-voting](img/firma_e-voting.png)
+
+			![Voto tradizionale](img/voto_tradizionale.png)
+			![Voto elettronico](img/voto_elettronico.png)
+		</section>
+		<section data-markdown>
+			> Il voto è personale ed eguale, libero e segreto
+
+			Art.48 della Costituzione
+		</section>
+		<section data-markdown>
+			### Personalità
+			Chi vota è chi dice di essere
+
+			Delegata al SSO
+			- Possibile predistribuire chiavi
+			- Verifica tramite dati biometrici
+		</section>
+		<section data-markdown>
+			### Eguaglianza
+			Impedire voto plurimo e multiplo
+
+			- Voto plurimo gestito dalla VC
+			- Voto multiplo dipendente dal client
+			- Eventuale disastro è confinato al raggruppamento
+		</section>
+		<section data-markdown>
+			### Libertà
+			Impedire voto sotto pressioni esterne
+
+			- Controllo via fotocamera frontale
+				- Inizialmente da parte di operatore
+				- Possibile impiego di IA
+		</section>
+		<section data-markdown>
+			### Segretezza
+			Garantita dalla completa separazione tra SC e VC.
+		</section>
+	</section>
+	<section>
+		<section data-markdown>
+			### Ambiti di ricerca futuri
+		</section>
+		<section data-markdown>
+			### Efficienza e scalabilità
+			- Algoritmi di consenso
+			- Problemi crittografici nuovi
+			- Sistemi alternativi (DAG)
+		</section>
+		<section data-markdown>
+			### Standardizzazione e interoperabilità
+			- Hyperledger
+			- Standard DIDM
+				- W3C
+				- Rebooting the Web of Trust
+			- Standard ISO/TC 307
+		</section>
+		<section data-markdown>
+			### Privacy
+			- Mixing
+			- Sharding
+			- Zero-Knowledge
+		</section>
+		<section data-markdown>
+			### In InfoCamere
+			Sistemi di gestione di identità di impresa
+			
+			usando Hyperledger Indy
+		</section>
+		<section data-markdown>
+			## Grazie per l'attenzione
+
+			Matteo Sovilla - 1124500
+			> matteo.sovilla@studenti.unipd.it
+		</section>
+	</section>
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+	// More info about config & dependencies:
+	// - https://github.com/hakimel/reveal.js#configuration
+	// - https://github.com/hakimel/reveal.js#dependencies
+	Reveal.initialize({
+		dependencies: [
+			{ src: 'plugin/markdown/marked.js' },
+			{ src: 'plugin/markdown/markdown.js' },
+			{ src: 'plugin/notes/notes.js', async: true },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+		]
+	});
+	Reveal.configure({ slideNumber: 'c/t' });
+</script>
+<style>
+	.reveal .slide-number {
+		color: black;
+		background: none;
+	}
+	.reveal section img {
+		background:none;
+		border:none;
+		box-shadow:none
+	}
+	img[alt="Logo Ethereum"],
+	img[alt="Logo Hyperledger"],
+	img[alt="Logo Fabric"],
+	img[alt="Logo Sawtooth"],
+	img[alt="Logo Indy"]{
+		height: 120px;
+	}
+</style>
+</body>
+
+</html>
