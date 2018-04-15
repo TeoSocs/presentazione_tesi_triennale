@@ -32,6 +32,10 @@
 		Proposta di un sistema di voto elettronico a trust limitato
 
 		18 Aprile 2018
+		
+		<aside>
+			Buongiorno a tutti, io sono Matteo Sovilla e sono qui per presentare i risultati del mio tirocinio riguardo ai contesti di applicabilità di blockchain, in particolare in ambito aziendale.
+		</aside>
 	</section>
 	<section>
 		<section data-markdown>
@@ -40,27 +44,42 @@
 			Relatore | Prof. Mauro Conti
 			Azienda ospitante | InfoCamere S.C.p.A
 			Tutor aziendale | Dott. Enrico Notariale
+			<aside>
+				Il mio tirocinio si è svolto nei mesi di ottobre e novembre nell'azienda InfoCamere, supportato dal mio tutor, il professor Conti, e dal mio responsabile in azienda, il dottor Enrico Notariale.
+			</aside>
 		</section>
 		<section data-markdown>
 			InfoCamere
 			- Supporto al back-office camerale
 			- Gestione contabilità e personale
 			- Gestione database
+			<aside>
+				InfoCamere è la società consortile delle Camere di commercio, si occupa di fornire il supporto alle Camere per quanto riguarda in particolare la gestione dei database e dei servizi informatici. Per questo motivo è interessata a capire come la tecnologia blockchain possa integrarsi con i propri sistemi, o abilitare la creazione di nuovi strumenti da fornire.
+			</aside>
 		</section>
 	</section>
 	<section>
-		<section data-markdown>
+		<!--section data-markdown>
 			### Blockchain
 			- Nuova Internet del Valore
 			- Democrazia digitale
 			- Quinto _disruptive computing paradigm_
 			- Quarta rivoluzione industriale
+			<aside>
+				Su blockchain si è detto molto, in particolare nell'ultimo anno. Spesso è stata oggetto di articoli, incontri e conferenze, e spesso è stata presentata con toni decisamente altisonanti: Nuova Internet del Valore, Democrazia digitale, Quarta rivoluzione industriale addirittura. 
+			</aside>
 		</section>
 		<section data-markdown>
 			![HypeCycle Gartner](img/HypeCycleThemes.png)
+			<aside>
+				Al momento ci troviamo infatti in quello che Gartner chiama "Il picco delle aspettative esagerate", ovvero quella fase di entusiasmo attraversata da tutte le nuove tecnologie e che è previsto che vada a scemare nel periodo immediatamente successivo, prima di assestarsi al suo equilibrio.
+			</aside>
 		</section>
 		<section data-markdown>
 			![Valore di Bitcoin nel 2018](img/bitcoin-price-update.png)
+			<aside>
+				In parte possiamo dire che la fase di "caduta" sia iniziata a gennaio. Il principale sistema "in produzione" basato su blockchain è Bitcoin, e nel grafico si può osservare come al picco di valore raggiunto a fine dicembre sia seguito un crollo che non accenna a diminuire molto presto.
+			</aside -->
 		</section>
 		<section data-markdown>
 			### Registro distribuito
@@ -69,53 +88,77 @@
 			- Append-only
 			- Immutabile
 			- _Aggiornabile solo previo consenso_
+			<aside>
+				Che cos'è blockchain, in sintesi?
+				Si tratta di un registro distribuito, con alcune proprietà interessanti. Peer-to-peer, crittograficamente sicuro, append-only, immutabile e aggiornabile solamente dopo aver raggiunto un accordo tra i vari peer. Nessuno può apportare modifiche che non siano condivise da altri peer, ed ecco perché a volte hanno parlato di democrazia digitale.
+			</aside>
 		</section>
 	</section>
 	<section>
 		<section data-markdown>
 			### Double spending
 			![Schema di double spending](img/double_spending_problem.jpg)
+			<aside>
+				Blockchain nasce da un problema: modellare valuta completamente digitale. Questo è reso difficile dall'estrema facilità di replicazione che hanno i dati digitali. Immaginando di modellare un'unità di valore come una stringa di byte, è possibile replicare quella stessa stringa all'infinito, cosa che è in conflitto con il senso comune e con l'uso tipico di queste unità di valore.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Soluzione centralizzata
 			![Schema di interazione con DB centralizzato](img/central_counterparty.png)
+			<aside>
+				Una prima soluzione è stata quella di utilizzare un database centralizzato, che controllasse e approvasse le transazioni rifiutando quelle non valide. Questo porta però a dover riporre fiducia nell'intermediario, che potrebbe alterare transazioni, censurare utenti, essere bersagliato per creare disservizi e così via.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Generali bizantini
 			![Schema di problema di generali bizantini](img/byzantine_generals.png)
+			<aside>
+				Sarebbe quindi consigliabile l'uso di un sistema distribuito, che è affetto però da un problema noto come "problema dei generali bizantini". È modellato nel modo seguente: un certo numero di generali devono attaccare un'accampamento. Non sono in contatto diretto ma tramite una rete di messaggeri. Tra di loro ci sono dei traditori, che alterano i messaggi trasmessi. Perché l'attacco abbia successo è necessario che tutti i generali non traditori attacchino assieme, devono pertanto raggiungere un consenso.
+			</aside>
 		</section>
-		<section data-markdown>
+		<!-- section data-markdown>
 			### Teorema CAP
 			![Schema di teorema CAP](img/cap.png)
-		</section>
+		</section -->
 	</section>
 	<section>
 		<section data-markdown>
 			### Block - chain
 			![Struttura a blocchi](img/bitcoin-block-chain.png)
+			<aside>
+				Ora vediamo come blockchain risolve il problema: i dati sono organizzati in una serie di blocchi, in cui ciascun blocco contiene un hash che lo lega al blocco precedente. L'altro numero che vedete è quella che si chiama "proof of work", ed è la soluzione ad un "problema matematico" legato al blocco (in particolare, si tratta di trovare un hash minore di una certa soglia determinata algoritmicamente).
+			</aside>
 		</section>
 		<section data-markdown>
 			Aggiungere blocchi è oneroso
 			![Difficoltà di mining](img/difficulty.png)
+			<aside>
+				Aggiungere blocchi è oneroso, e questa difficoltà cresce nel tempo in modo da permettere l'aggiunta di un nuovo blocco ogni 10 minuti di media (nel caso di Bitcoin).
+			</aside>
 		</section>
 		<section data-markdown>
 			### Consenso Proof-of-work
 			_Vince_ la catena più lunga
+			<aside>
+				Il consenso è ottenuto con una specie di gara: vince la catena più lunga. La gara è resa appetibile tramite ricompensa economica (generazione di nuovi bitcoin, o mining), e questo la rende una particolarità delle blockchain basate su una valuta.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Altri consensi
 			- Proof-of-Stake
 			- Proof-of-Elapsed-Time
-		</section>
-		<section data-markdown>
-			### Solo in catene private
-			- Federated (Byzantine) agreement
 			- Practical Byzantine Fault Tolerance
+			<aside>
+				Ci sono altri tipi di consenso possibili: Proof of stake, in cui invece di una gara esiste una specie di lotteria in cui ogni unità di valuta è un biglietto, Proof-of-Elapsed-Time in cui un hardware dedicato assicura che sia passata una certa quantità di tempo casuale, e nel caso di sistemi non pubblici ma privati è possibile usare algoritmi meno robusti ma estremamente più veloci, come il PBFT.
+			</aside>
 		</section>
 	</section>
 	<section>
 		<section data-markdown>
 			### Analisi SWOT
+			<aside>
+				Riepilogo ora pro e contro dell'applicazione di blockchain in ambito aziendale.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Strengths
@@ -124,12 +167,18 @@
 			- Sistema resiliente
 				- No SPoF, censurabilità o revocabilità del servizio 
 			- Crittograficamente sicuro
+			<aside>
+				Tra i punti di forza abbiamo l'assenza di un database centrale. Ciò porta a condividere dati, responsabilità e fiducia, eliminare i single point of failure e il rischio di censura o revoca del servizio.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Weaknesses
 			- Inefficienza
 			- Problemi di privacy
 			- Tecnologie immature
+			<aside>
+				Di contro, il sistema è estremamente meno efficiente di un database tradizionale, il fatto di condividere la catena porta ad evidenti problemi di privacy del dato e le tecnologie presenti al momento sono immature e pertanto mancano gli strumenti adatti ad inserire lo sviluppo su blockchain nel workflow aziendale.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Opportunities
@@ -137,6 +186,9 @@
 			- Gestione identità digitale
 			- Voto elettronico
 			- Sistemi IoT "certificati"
+			<aside>
+				L'adozione di blockchain abiliterebbe alla razionalizzazione dei sistemi di certificati, alla gestione dell'identità digitale, ai sistemi di voto elettronico e all'uso dell'IoT in ambiti che richiedono dispositivi "certificati".
+			</aside>
 		</section>
 		<section data-markdown>
 			### Threats
@@ -144,18 +196,27 @@
 			- Difficile previsione dei costi
 			- Impossibili interventi correttivi
 			- Rischio di lock-in
+			<aside>
+				È necessaria però una certa cautela, in quanto blockchain è un sistema complesso e difficilissimo da adattare: si basa su equilibri delicati che affiancano agli innegabili vantaggi degli svantaggi difficilmente eliminabili. È difficile prevedere i costi di un sistema "a regime" e sono impossibili interventi correttivi in caso di errore. È inoltre presente il rischio di lock-in all'interno di un particolare sistema, e non riuscire a migrare con facilità qualora emergessero competitor migliori.
+			</aside>
 		</section>
 	</section>
 	<section>
 		<section data-markdown>
 			### Proof of concept
 			Sistema di voto online
+			<aside>
+				La realizzazione di una piccola demo prototipale si è orientata sulla progettazione di un sistema di voto online basato su blockchain.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Ecosistema attuale
 			![Logo Ethereum](img/ethereum-logo.png)
 
 			![Logo Hyperledger](img/hyperledger_logo.png)
+			<aside>
+				Al momento i competitor più affermati per la creazione di sistemi basati su blockchain sono Ethereum e Hyperledger. Il primo è una catena pubblica che offre servizi per la creazione di programmi distribuiti e autonomi che chiama "smart contract".
+			</aside>
 		</section>
 		<section data-markdown>
 			![Logo Fabric](img/fabric_logo.png)
@@ -163,14 +224,23 @@
 			![Logo Sawtooth](img/sawtooth_logo.png)
 
 			![Logo Indy](img/indy-logo.png)
+			<aside>
+				Il secondo è una collezione di progetti della linux foundation, tra cui i principali sono Fabric (a cui contribuisce IBM), Sawtooth progettato inizialmente da Intel e Indy che si focalizza sulla gestione delle identità digitali. In particolare è stato scelto Fabric in quanto a novembre era l'unico dei tre che avesse raggiunto la versione 1.0.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Ring signature
 			![Schema di ring signature](img/ring_signature.png)
+			<aside>
+				Lo use case del voting è complesso poiché è necessario garantire allo stesso tempo la validità del voto e l'anonimato del votante. A risolvere il problema esiste una classe di firme digitali chiamate ring signature che permettono di avere la prova crittografica dell'appartenenza di colui che firma ad un gruppo di "autorizzati", senza però rivelarne l'identità.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Workflow
 			![Workflow della votazione](img/voting_workflow.png)
+			<aside>
+				Il sistema di voto progettato "mima" un sistema di voto reale, ogni attore digitale ha un corrispondente "fisico" nei sistemi tradizionali. In particolare, il client è il votante, la blockchain di firma (SC) è il registro dei votanti, il sistema di SignOn è il presidente di seggio e la blockchain di firma VC è l'urna elettorale.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Analogie con il sistema tradizionale
@@ -179,11 +249,17 @@
 
 			![Voto tradizionale](img/voto_tradizionale.png)
 			![Voto elettronico](img/voto_elettronico.png)
+			<aside>
+				L'utente, dopo esser stato riconosciuto dal presidente di seggio firma il registro e riceve la scheda che lo abilita a votare. Procede poi a "creare" il suo voto all'interno della cabina (in locale) e lo inserisce nell'urna.
+			</aside>
 		</section>
 		<section data-markdown>
 			> Il voto è personale ed eguale, libero e segreto
 
 			Art.48 della Costituzione
+			<aside>
+				Le caratteristiche del voto sono indicate nella costituzione italiana, vediamo come un sistema simile a quello descritto può garantirne il rispetto.
+			</aside>
 		</section>
 		<section data-markdown>
 			### Personalità
