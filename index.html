@@ -210,7 +210,7 @@
 			![Schema di ring signature](img/ring_signature.png)
 		</section>
 		<section data-markdown
-			data-notes="Il sistema di voto progettato 'mima' un sistema di voto reale, ogni attore digitale ha un corrispondente 'fisico' nei sistemi tradizionali. In particolare, il client è il votante, la blockchain di firma (SC) è il registro dei votanti, il sistema di SignOn è il presidente di seggio e la blockchain di firma VC è l'urna elettorale.">
+			data-notes="Il sistema di voto progettato 'mima' un sistema di voto reale, ogni attore digitale ha un corrispondente 'fisico' nei sistemi tradizionali. In particolare, il client è il votante e come nel caso reale è inserito in un raggruppamento simile alla sezione elettorale, per mantenere sotto controllo la complessità computazionale della ring signature. La blockchain di firma (SC) è il registro dei votanti e la blockchain di firma VC è l'urna elettorale. Il sistema di SignOn è il presidente di seggio, e svolge funzioni di controllo analoghe.">
 			### Workflow
 			![Workflow della votazione](img/voting_workflow.png)
 		</section>
@@ -233,7 +233,7 @@
 			### Personalità
 			Chi vota è chi dice di essere
 
-			Delegata al SSO
+			- Delegata al sistema di sign on
 			- Possibile predistribuire chiavi
 			- Verifica tramite dati biometrici
 		</section>
@@ -241,7 +241,7 @@
 			### Eguaglianza
 			Impedire voto plurimo e multiplo
 
-			- Voto plurimo gestito dalla VC
+			- Voto plurimo gestito dalla blockchain di voto
 			- Voto multiplo dipendente dal client
 			- Eventuale disastro è confinato al raggruppamento
 		</section>
@@ -255,7 +255,7 @@
 		</section>
 		<section data-markdown>
 			### Segretezza
-			Garantita dalla completa separazione tra SC e VC.
+			Garantita dalla completa separazione tra blockchain di firma e blockchain di voto.
 		</section>
 	</section>
 	<section>
