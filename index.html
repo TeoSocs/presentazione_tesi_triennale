@@ -35,6 +35,14 @@
 		18 Aprile 2018
 	</section>
 	<section>
+		<section data-markdown>
+			### Sommario
+			- Introduzione
+			- Cos'è blockchain
+			- Analisi SWOT
+			- Proof of concept
+			- Conclusioni
+		</section>
 		<section data-markdown
 			data-notes="Il mio tirocinio si è svolto nei mesi di ottobre e novembre nell'azienda InfoCamere, supportato dal mio tutor, il professor Conti, e dal mio responsabile in azienda, il dottor Enrico Notariale.">
 			Candidato | Matteo Sovilla
@@ -79,7 +87,7 @@
 			- Immutabile
 			- _Aggiornabile solo previo consenso_
 		</section>
-		<section data-markdown
+		<!-- section data-markdown
 			data-notes="Blockchain nasce da un problema: modellare valuta completamente digitale. Questo è reso difficile dall'estrema facilità di replicazione che hanno i dati digitali. Immaginando di modellare un'unità di valore come una stringa di byte, è possibile replicare quella stessa stringa all'infinito, cosa che è in conflitto con il senso comune e con l'uso tipico di queste unità di valore.">
 			### Double spending
 			![Schema di double spending](img/double_spending_problem.jpg)
@@ -88,6 +96,19 @@
 			data-notes="Una prima soluzione è stata quella di utilizzare un database centralizzato, che controllasse e approvasse le transazioni rifiutando quelle non valide. Questo porta però a dover riporre fiducia nell'intermediario, che potrebbe alterare transazioni, censurare utenti, essere bersagliato per creare disservizi e così via.">
 			### Soluzione centralizzata
 			![Schema di interazione con DB centralizzato](img/central_counterparty.png)
+		</section -->
+		<section data-markdown
+			data-notes="Finora, l'unico modo per gestire dati condivisi garantendo che gli stessi non venissero alterati è stato l'uso di database centralizzati. In questi sistemi, il server centrale si occupa di controllare la validità delle richieste che arrivano dai client, e solo in seguito esegue le operazioni necessarie. Pensiamo ad esempio ai database di una banca, dove i trasferimenti di denaro avvengono solamente se il conto di colui che versa ha sufficienti fondi.">
+			### Database centralizzato
+			![Schema database centralizzato](img/centralizedDB.jpg)
+		</section>
+		<section data-markdown
+			data-notes="Un database centralizzato porta però ad avere un nodo centrale delicato. Un disservizio nel nodo centrale porta l'intero sistema a non essere utilizzabile, il gestore di questo nodo ha la responsabilità assoluta del sistema, gli utenti devono riporre fiducia nel nodo centrale e affidargli i controlli di validità in toto, oltre a non avere nessuna garanzia sulla non revocabilità del servizio.">
+			### Conseguenze 
+			- Single point of failure
+			- Responsabilità unica
+			- Revocabilità del servizio
+			- Necessità di fiducia
 		</section>
 		<section data-markdown
 			data-notes="Sarebbe quindi consigliabile l'uso di un sistema distribuito, che è affetto però da un problema noto come "problema dei generali bizantini". È modellato nel modo seguente: un certo numero di generali devono attaccare un'accampamento. Non sono in contatto diretto ma tramite una rete di messaggeri. Tra di loro ci sono dei traditori, che alterano i messaggi trasmessi. Perché l'attacco abbia successo è necessario che tutti i generali non traditori attacchino assieme, devono pertanto raggiungere un consenso.">
@@ -107,7 +128,7 @@
 		</section>
 		<section data-markdown
 			data-notes="Aggiungere blocchi è oneroso, e questa difficoltà cresce nel tempo in modo da permettere l'aggiunta di un nuovo blocco ogni 10 minuti di media (nel caso di Bitcoin).">
-			Aggiungere blocchi è oneroso
+			Aggiungere blocchi è difficile
 			![Difficoltà di mining](img/difficulty.png)
 		</section>
 		<section data-markdown
